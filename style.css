@@ -16,8 +16,8 @@ body {
 .header__nav-pills {
   -webkit-transform: translateX(176px);
           transform: translateX(176px);
-  -webkit-transition: 0.6s 1s;
-  transition: 0.6s 1s;
+  -webkit-transition: 0.6s 0.2s;
+  transition: 0.6s 0.2s;
 }
 
 .header__logo {
@@ -60,12 +60,20 @@ body {
 }
 
 .header--scrolled {
-  background: black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-blend-mode: exclusion;
+  background: rgba(14, 14, 26, 0.5);
   height: 60px;
 }
 
 .header--scrolled__logo {
   max-height: 60px;
+}
+
+.header--scrolled__nav-pills {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .welcome {

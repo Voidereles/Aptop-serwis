@@ -20,7 +20,7 @@ $almost-black:rgba(14, 14, 26, 0.5);
 
     &__nav-pills {
         transform: translateX(176px);
-        transition: $slow 1s;
+        transition: $slow $fast;
     }
 
     &__logo {
@@ -61,11 +61,19 @@ $almost-black:rgba(14, 14, 26, 0.5);
 }
 
 .header--scrolled {
-    background: black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-blend-mode: exclusion;
+    background: $almost-black;
     height: $header-height-mobile;
 
     &__logo {
         max-height: $header-height-mobile;
+    }
+
+
+    &__nav-pills {
+        transform: translateX(0);
     }
 }
 
