@@ -1,0 +1,205 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+$header-height-mobile: 60px;
+$header-height-desktop: 100px;
+$aptop-red: rgba(255, 24, 0, 1);
+$fast:0.2s;
+$slow:0.6s;
+$almost-black:rgba(14, 14, 26, 0.5);
+
+.header {
+    height: $header-height-mobile;
+    transition: $fast;
+
+    &__navbar-nav {
+        overflow: hidden;
+    }
+
+    &__nav-pills {
+        transform: translateX(176px);
+        transition: $slow 1s;
+    }
+
+    &__logo {
+        max-height: $header-height-mobile;
+        transition: all $fast, width 0s;
+    }
+
+    &__nav-link {
+        color: white;
+        transition: $fast;
+    }
+
+    &__nav-item .active {
+        color: $aptop-red;
+    }
+
+    &__nav-link:hover {
+        color: $aptop-red;
+    }
+
+    &__nav-tel::before {
+        content: '';
+        width: 2px;
+        height: 2rem;
+        background-color: $aptop-red;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(-0.75rem, -50%);
+        border-radius: 15px;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        color: $aptop-red;
+        background-color: transparent;
+    }
+}
+
+.header--scrolled {
+    background: black;
+    height: $header-height-mobile;
+
+    &__logo {
+        max-height: $header-height-mobile;
+    }
+}
+
+
+.welcome {
+    text-align: center;
+    height: 100vh;
+    background: url('images/tlo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__content {
+        animation: 1s .5s fade-in-move-up forwards;
+        opacity: 0;
+    }
+
+    h3::selection {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__tel {
+        color: white;
+        font-size: 2rem;
+        transition: $fast;
+    }
+
+    &__tel:hover {
+        color: $aptop-red;
+        text-decoration: none;
+        font-size: 2.2rem;
+    }
+
+    hr {
+        width: 80vw;
+        max-width: 0px;
+        border-top: 1px solid #f8f8f8;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        opacity: .5;
+        animation: .5s 1.5s width-extend forwards;
+    }
+
+    .fa-chevron-down {
+        font-size: 2rem;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: 3.5s 1.5s arrow infinite;
+    }
+
+
+}
+
+.about {
+    height: 100vh;
+    background-color: darkblue;
+}
+
+
+@keyframes fade-in-move-up {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes width-extend {
+    0% {}
+
+    100% {
+        max-width: 400px;
+        opacity: 1;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+@media (min-width:992px) {
+    .header {
+        height: $header-height-desktop;
+
+        &__logo {
+            max-height: $header-height-desktop;
+        }
+    }
+
+    .header--scrolled {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-blend-mode: exclusion;
+        background: $almost-black;
+        height: $header-height-mobile;
+
+        &__logo {
+            max-height: $header-height-mobile;
+        }
+
+
+        &__nav-pills {
+            transform: translateX(0);
+        }
+    }
+
+
+
+
+}
