@@ -18,8 +18,8 @@ if (window.innerWidth > 992) {
 
 
     window.addEventListener("mousemove", (e) => {
-        background.style.backgroundPositionX = (-e.offsetX) / 50 + "px";
-        background.style.backgroundPositionY = (-e.offsetY) / 50 + "px";
+        background.style.backgroundPositionX = (-e.clientX) / 50 + "px";
+        background.style.backgroundPositionY = (-e.clientY) / 50 + "px";
     });
 }
 

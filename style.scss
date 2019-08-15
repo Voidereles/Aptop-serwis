@@ -9,10 +9,13 @@ $aptop-red: rgba(255, 24, 0, 1);
 $fast:0.25s;
 $medium:0.45s;
 $slow:0.6s;
-$almost-black:rgba(14, 14, 26, 0.9);
+$almost-black:rgba(14, 14, 26, 0.95);
 
 .header {
     transition: $slow 0.05s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: $almost-black;
 
     &__navbar-nav {
         overflow: hidden;
@@ -48,33 +51,29 @@ $almost-black:rgba(14, 14, 26, 0.9);
     }
 }
 
-.header--scrolled {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background-color: $almost-black;
-
-    &__logo {
-        max-height: $header-height-mobile;
-    }
-
-    &__nav-pills {
-        transform: translateX(0);
-    }
+.flow-hidden {
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* #region Main */
 .welcome {
     text-align: center;
-    height: 100vh;
+    height: 105vh;
+    width: 105vw;
     background: url('images/tlo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    // &__content {
-    //     animation: 1s .5s fade-in-move-up forwards;
-    //     opacity: 0;
-    // }
+    &__content {
+        // animation: 1s .5s fade-in-move-up forwards;
+        // opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
 
     &__heading {
         font-size: 1.25rem;
@@ -161,12 +160,13 @@ $almost-black:rgba(14, 14, 26, 0.9);
     }
 }
 
-/* #endregion */
 
 @media (min-width:992px) {
     .header {
         height: $header-height-desktop;
         background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
 
         &__logo {
             max-height: $header-height-desktop;
@@ -191,7 +191,8 @@ $almost-black:rgba(14, 14, 26, 0.9);
 
     .header--scrolled {
         height: $header-height-mobile;
-
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         background-color: $almost-black;
 
         &__logo {
