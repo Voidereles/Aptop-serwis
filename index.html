@@ -44,21 +44,24 @@
 
 
 	<header id="header" class="header fixed-top">
+
 		<div class="container">
 			<div class="row">
-				<nav id="headerNavbar" class="navbar header__navbar w-100 navbar-expand-lg" role="navigation">
+				<nav id="headerNavbar" class="navbar navbar-inverse header__navbar w-100 navbar-expand-lg p-0"
+					role="navigation">
 					<a class="navbar-brand" href="#">
 						<img src="images/logo.svg" id="headerLogo" class="d-inline-block align-top header__logo p-3"
 							alt="">
 					</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
+					<button id="navToggler" class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
 						aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div class="navbar-nav header__navbar-nav mr-lg-4">
-							<ul id="headerNavPills" class="nav nav-pills header__nav-pills">
+							<ul id="headerNavPills"
+								class="nav nav-pills header__nav-pills flex-column flex-lg-row px-3 px-lg-0">
 								<li class="nav-item">
 									<a class="nav-link header__nav-link active" href="#start">Start</a>
 								</li>
@@ -71,7 +74,7 @@
 								<li class="nav-item">
 									<a class="nav-link header__nav-link" href="#">Kontakt</a>
 								</li>
-								<li class="header__nav-tel ml-4">
+								<li class="header__nav-tel ml-lg-4">
 									<a class="nav-link header__nav-link" href="tel:+48663880754">
 										<i class="fas fa-phone-alt"></i>
 										(+48) 663 880 754</a>
@@ -87,23 +90,26 @@
 	</header>
 
 	<main class="main">
-		<section id="start" class="welcome">
-			<div class="container h-100">
-				<div class="row align-items-center h-100">
-					<div class="welcome__content mx-auto">
-						<h3>Problem z laptopem, komputerem lub smartfonem? <span class="d-inline-block">Zadzwoń
-								do nas!</span></h3>
-						<hr>
-						<a class="welcome__tel text-decoration-none" href="tel:+48663880754">
-							<i class="fas fa-phone-alt"></i>
-							(+48) 663 880 754</a>
+		<div class="flow-hidden">
+			<section id="start" class="welcome">
+				<div class="container h-100">
+					<div class="row h-100">
+						<div class="welcome__content m-auto">
+							<h3 class="welcome__heading">Problem z laptopem, komputerem lub smartfonem? <span
+									class="d-inline-block">Zadzwoń
+									do nas!</span></h3>
+							<hr>
+							<a class="welcome__tel text-decoration-none" href="tel:+48663880754">
+								<i class="fas fa-phone-alt"></i>
+								(+48) 663 880 754</a>
+						</div>
+						<i class="fas fa-chevron-down"></i>
 					</div>
-					<i class="fas fa-chevron-down"></i>
+
+
 				</div>
-
-
-			</div>
-		</section>
+			</section>
+		</div>
 		<section class="about">
 
 		</section>
