@@ -10,7 +10,7 @@ $fast:0.25s;
 $medium:0.45s;
 $slow:0.6s;
 $almost-black:rgba(14, 14, 26, 0.95);
-$text-size-medium: 1.25rem;
+$text-size-medium: 1.2rem;
 
 .header {
     transition: $slow 0.05s;
@@ -113,6 +113,10 @@ $text-size-medium: 1.25rem;
         opacity: 0;
     }
 
+    &__p {
+        line-height: 1.7;
+    }
+
     &__svg {
         height: 50px;
     }
@@ -148,8 +152,8 @@ $text-size-medium: 1.25rem;
         background-attachment: fixed;
     }
 
-    &__images img {
-        width: 100%;
+    &__p {
+        line-height: 1.6;
     }
 }
 

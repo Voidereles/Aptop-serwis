@@ -112,6 +112,10 @@ body {
   opacity: 0;
 }
 
+.about__p {
+  line-height: 1.7;
+}
+
 .about__svg {
   height: 50px;
 }
@@ -146,8 +150,8 @@ body {
   background-attachment: fixed;
 }
 
-.offer__images img {
-  width: 100%;
+.offer__p {
+  line-height: 1.6;
 }
 
 .drive {
@@ -155,7 +159,7 @@ body {
 }
 
 .drive__p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .drive__map {
