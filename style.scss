@@ -46,6 +46,12 @@ $text-size-medium: 1.2rem;
         color: $aptop-red;
         background-color: transparent;
     }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 .flow-hidden {
@@ -340,15 +346,10 @@ $text-size-medium: 1.2rem;
 @keyframes fadeInUp {
     from {
         transform: translate3d(0, 60px, 0);
-
-
-
     }
 
     to {
         transform: translate3d(0, 0, 0);
         opacity: 1;
-
-
     }
 }

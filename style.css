@@ -43,6 +43,13 @@ body {
   background-color: transparent;
 }
 
+.header .navbar-toggler:focus,
+.header .navbar-toggler:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .flow-hidden {
   height: 100vh;
   overflow: hidden;
