@@ -157,6 +157,10 @@ $text-size-medium: 1.2rem;
         line-height: 1.6;
     }
 
+    &__images img {
+        max-width: 100%;
+    }
+
 }
 
 .drive {
@@ -293,15 +297,15 @@ $text-size-medium: 1.2rem;
 }
 
 .two {
-    animation-delay: 1s;
+    animation-delay: 0.8s;
 }
 
 .three {
-    animation-delay: 1.5s;
+    animation-delay: 1.1s;
 }
 
 .four {
-    animation-delay: 2s;
+    animation-delay: 1.4s;
 }
 
 
