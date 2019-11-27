@@ -219,6 +219,10 @@ body {
   }
   .contact__data {
     font-size: 0.9rem;
+    line-height: 2.5;
+  }
+  .contact__data .normalize-line-h {
+    line-height: normal;
   }
 }
 
